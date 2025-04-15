@@ -1,7 +1,7 @@
 from django.db import models
 
-from backend.apps.auditoriums.models import Auditorium
-from backend.apps.employees.models import Employee
+from apps.auditoriums.models import Auditorium
+from apps.employees.models import Employee
 
 
 # Create your models here.

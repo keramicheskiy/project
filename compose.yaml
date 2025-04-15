@@ -11,7 +11,6 @@ services:
   backend:
     container_name: backend
     build: ./backend
-    #    image: backend
     expose: 8000
     environment:
       - SECRET_KEY = django-insecure-%4!fctsed7cv17dy#u#sn9+4rjw+$)*1#b#^i5f1u3s*6&+t6o
@@ -23,8 +22,11 @@ services:
   frontend:
     container_name: frontend
     build: ./frontend
-    #    image: frontend
     expose: 8080
+    environment:
+      - SECRET_KEY = django-insecure-h5r(anz1p9b#^zr$=64!3=z5jz-645%1m19snvi43+)=k!d3#e
+      - DEBUG = 0
+      - ALLOWED_HOSTS = 77.239.96.124 127.0.0.1 localhost 0.0.0.0
     depends_on:
       - backend
 
@@ -32,7 +34,6 @@ services:
   tg-bot:
     container_name: tg-bot
     build: ./tg-bot
-    #    image: tg-bot
     environment:
       - TOKEN = 7844200914:AAFPCl39h-hGhqfpFhShyReSjRQXEBogyes
     depends_on:

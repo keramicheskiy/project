@@ -1,6 +1,6 @@
 from django.db import models
 
-from backend.apps.core.models import Organization, Faculty
+from apps.core.models import Organization, Faculty
 
 
 # Create your models here.

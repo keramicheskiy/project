@@ -1,7 +1,6 @@
 from django.db import models
 
-from backend.apps.core.models import Equipment, Organization, Location
-
+from apps.core.models import Equipment, Organization, Location
 
 class Auditorium(models.Model):
     number = models.CharField(max_length=10)
